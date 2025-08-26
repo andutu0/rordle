@@ -1,10 +1,11 @@
 #include <stdio.h>
+#include "game.h"
 
 int main() {
 
     // alegem numarul de litere cu care vrem sa jucam
-    int optiune = 0;
-    int litere = 0;
+    int option = 0;
+    int number_of_letters = 0;
 
     printf("=== Rordle ===\n");
     printf("Alege dimensiunea cuvantului:\n");
@@ -13,23 +14,26 @@ int main() {
     printf("3) 6 litere\n");
 
     printf("Introdu optiunea (1-3): ");
-    scanf("%d", &optiune);
+    scanf("%d", &option);
 
-    switch(optiune) {
+    switch(option) {
         case 1:
-            litere = 4;
+            number_of_letters = 4;
             break;
         case 2:
-            litere = 5;
+            number_of_letters = 5;
             break;
         case 3:
-            litere = 6;
+            number_of_letters = 6;
             break;
         default:
             printf("Optiune invalida! Pornim default cu 5 litere.\n");
-            litere = 5;
+            number_of_letters = 5;
             break;
     }
+
+    printf("Pornim jocul cu %d litere.\n", number_of_letters);
+    start_game(number_of_letters);
 
     return 0;
 }
