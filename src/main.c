@@ -14,7 +14,10 @@ int main() {
     printf("3) 6 litere\n\n");
 
     printf("Introdu optiunea (1-3): ");
-    scanf("%d", &option);
+    if (scanf("%d", &option) != 1) {
+        printf("Eroare la citirea optiunii! Pornim default cu 5 litere.\n\n");
+        option = 2;
+    }
 
     switch(option) {
         case 1:
