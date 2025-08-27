@@ -7,11 +7,11 @@ int main() {
     int option = 0;
     int number_of_letters = 0;
 
-    printf("=== Rordle ===\n");
-    printf("Alege dimensiunea cuvantului:\n");
+    printf("=== Rordle ===\n\n");
+    printf("Alege dimensiunea cuvantului:\n\n");
     printf("1) 4 litere\n");
     printf("2) 5 litere\n");
-    printf("3) 6 litere\n");
+    printf("3) 6 litere\n\n");
 
     printf("Introdu optiunea (1-3): ");
     scanf("%d", &option);
@@ -27,7 +27,7 @@ int main() {
             number_of_letters = 6;
             break;
         default:
-            printf("Optiune invalida! Pornim default cu 5 litere.\n");
+            printf("Optiune invalida! Pornim default cu 5 litere.\n\n");
             number_of_letters = 5;
             break;
     }
